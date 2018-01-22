@@ -1,0 +1,32 @@
+.root{
+    -fx-background-color: white;
+}
+
+#loginButton{
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.menu-bar, #loginButton{
+    -fx-background-color: #f04837;
+}
+
+.menu > .label{
+    -fx-text-fill: white;
+}
+
+.menu-item > .label{
+    -fx-text-fill: black;
+}
+
+#heading, #courseList > .label, #courseListHeading > .label, #contentLayout > .label, #content > .label{
+    -fx-text-fill: #f04837;
+}
+
+#heading, #contentLayout > .topic{
+    -fx-font-weight: bold;
+}
+
+#contentLayout > .topic{
+    -fx-font-size: 20;
+}

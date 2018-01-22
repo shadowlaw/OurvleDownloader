@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="400.0" stylesheets="/GUI/styles/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controllers.loginController">
+   <children>
+      <BorderPane prefHeight="325.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="82.0" fitWidth="93.0" layoutX="165.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="14.0">
+                     <image>
+                        <Image url="@../images/ourvleLogo.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="username" focusColor="#f04837" layoutX="103.0" layoutY="123.0" onKeyPressed="#checkLogin" prefHeight="25.0" prefWidth="203.0" promptText="Username" unFocusColor="BLACK" AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="103.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="123.0">
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#f04837" onKeyPressed="#checkLogin" prefHeight="25.0" prefWidth="201.0" promptText="Password" unFocusColor="BLACK">
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="175.0" layoutY="208.0" onAction="#login" text="LOG IN" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="161.0" AnchorPane.topAnchor="208.0" />
+                  <ProgressIndicator fx:id="loginIndi" maxHeight="25.0" maxWidth="21.0" visible="false" />
+                  <Label fx:id="messageLabel" />
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
