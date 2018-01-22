@@ -75,7 +75,7 @@ public class loginController {
     private void loadContentView(){
         try{
             Stage primaryStage = (Stage) this.rootPane.getScene().getWindow();
-            String viewLocation = "../fxmls/contentView.fxml";
+            String viewLocation = "/GUI/fxmls/contentView.fxml";
             Parent contentView = FXMLLoader.load(getClass().getResource(viewLocation));
             primaryStage.setScene(new Scene(contentView,400,325));
         }catch(Exception e){
